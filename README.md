@@ -13,7 +13,7 @@ This project uses the **Kaggle Mental Health Sentiment Analysis dataset** to cla
 - Stress
 - Personality Disorder
 
-**Achieved Accuracy: 78.06%** using Logistic Regression with optimized TF-IDF features.
+**Achieved Accuracy: 80.06%** using Logistic Regression with optimized TF-IDF features.
 
 ## 🎯 Key Features
 
@@ -95,7 +95,7 @@ pip install matplotlib seaborn scikit-learn pandas numpy scipy
 
 | Model | Accuracy |
 |-------|----------|
-| Logistic Regression | 78.06% ✅ |
+| Logistic Regression | 80.06% ✅ |
 | SVM | 74.26% |
 
 ### Performance Context
@@ -215,7 +215,7 @@ MENTAL HEALTH DETECTION - FINAL RESULTS
 
 📊 Dataset: 51,060 samples, 7 classes
 🎯 Best Model: Logistic Regression
-✅ Accuracy: 78.06%
+✅ Accuracy: 80.06%
 📈 5.6x better than random guessing
 🚀 Excellent performance for traditional ML!
 
