@@ -86,23 +86,23 @@ pip install matplotlib seaborn scikit-learn pandas numpy scipy
 
 | Metric | Score |
 |--------|-------|
-| **Accuracy** | **78.06%** |
-| **Precision** | **77.93%** |
-| **Recall** | **78.06%** |
-| **F1-Score** | **77.94%** |
+| **Accuracy** | **80.06%** |
+| **Precision** | **79.87%** |
+| **Recall** | **80.00%** |
+| **F1-Score** | **79.88%** |
 
 ### Model Comparison
 
 | Model | Accuracy |
 |-------|----------|
-| Logistic Regression | 80.06% ✅ |
+| Logistic Regression | 80.06% |
 | SVM | 74.26% |
 
 ### Performance Context
 - **Random Baseline**: 14.3% (1 in 7 classes)
-- **Improvement**: 5.6x better than random guessing
-- **Traditional ML Limit**: 75-80% for 7-class problems
-- **Deep Learning (BERT)**: Could achieve 85-92%
+- **Improvement**: 5.6× better than random guessing
+- **Traditional ML Benchmark**: 75-80% for 7-class text classification problems
+- **Deep Learning Potential**: Transformer models (BERT, RoBERTa) could achieve 85-92%
 
 ## 🛠️ Technical Details
 
@@ -146,26 +146,27 @@ ml/
 
 ## 🔍 Key Insights
 
-### Why 78% Accuracy?
+### Model Performance Analysis
 
-This is a **challenging 7-class classification problem** with:
-- **Imbalanced classes** (2.3% to 30.8%)
-- **Overlapping symptoms** (Depression/Anxiety/Suicidal use similar words)
-- **Traditional ML limitations** (no context understanding)
+This 7-class classification problem presents several inherent challenges:
+- **Class Imbalance**: Distribution ranges from 2.3% to 30.8%
+- **Overlapping Linguistic Patterns**: Mental health conditions share similar vocabulary and expressions
+- **Limited Contextual Understanding**: Traditional ML approaches lack semantic comprehension
 
-**78% accuracy is excellent for traditional ML!**
+Achieving 80% accuracy represents strong performance for traditional machine learning methods on this complex multi-class problem.
 
-### Challenges
-1. **Class Imbalance**: Some classes have very few samples
-2. **Similar Text Patterns**: Mental health conditions share vocabulary
-3. **Context Dependency**: "I'm not suicidal" vs "I'm suicidal" (needs deep learning)
+### Technical Challenges
+1. **Class Imbalance**: Minority classes represent less than 3% of the dataset
+2. **Lexical Overlap**: Mental health conditions exhibit similar linguistic patterns
+3. **Negation and Context**: Traditional bag-of-words approaches cannot distinguish contextual negation (e.g., "not suicidal" vs "suicidal")
 
-### Future Improvements
+### Future Research Directions
 To achieve 85-92% accuracy:
-- Use **BERT** or **RoBERTa** transformers
-- Try **Mental-BERT** (pre-trained on mental health text)
-- Implement **ensemble of deep learning models**
-- Use **data augmentation** for minority classes
+- Implement transformer-based models (BERT, RoBERTa, GPT)
+- Explore domain-specific pre-trained models (e.g., Mental-BERT)
+- Develop ensemble architectures combining multiple deep learning approaches
+- Apply data augmentation techniques to address class imbalance
+- Investigate attention mechanisms for interpretability
 
 ## 📝 Notebook Sections
 
@@ -181,49 +182,49 @@ To achieve 85-92% accuracy:
 10. **Detailed Analysis** - Classification report, confusion matrix
 11. **Summary** - Final results and conclusions
 
-## 🤝 Contributing
+## Contributing
 
-This is an educational project. Suggestions for improvements:
-- Try deep learning models (LSTM, BERT)
-- Experiment with different feature engineering
-- Add cross-validation
-- Implement hyperparameter tuning
+This project serves as an educational implementation. Potential enhancements include:
+- Implementation of deep learning architectures (LSTM, GRU, Transformer)
+- Advanced feature engineering techniques
+- K-fold cross-validation for robust performance estimation
+- Systematic hyperparameter optimization using grid search or Bayesian methods
 
-## ⚠️ Important Notes
+## Disclaimer
 
-- This is for **educational purposes only**
-- Not intended for **clinical diagnosis**
-- Mental health assessment requires **professional evaluation**
-- The model has limitations and may not generalize to all text
+- This project is intended for **educational and research purposes only**
+- This model is **not suitable for clinical diagnosis** or medical decision-making
+- Mental health assessment requires evaluation by qualified healthcare professionals
+- Model performance may vary significantly on out-of-distribution data
 
-## 📚 References
+## References
 
-- Dataset: [Kaggle Mental Health Sentiment Analysis](https://www.kaggle.com/datasets/suchintikasarkar/sentiment-analysis-for-mental-health)
-- Libraries: scikit-learn, pandas, numpy, matplotlib, seaborn
-- Techniques: TF-IDF, Logistic Regression, SVM
+- **Dataset**: Sarkar, S. (2023). Mental Health Sentiment Analysis Dataset. Kaggle. https://www.kaggle.com/datasets/suchintikasarkar/sentiment-analysis-for-mental-health
+- **Libraries**: scikit-learn, pandas, numpy, matplotlib, seaborn
+- **Methodologies**: TF-IDF vectorization, Logistic Regression, Support Vector Machines
 
-## 📄 License
+## License
 
-This project is for educational purposes. Please cite the dataset source if using in research.
+This project is released for educational purposes. Please cite the original dataset source when using this work in research or publications.
 
-## 🏆 Results Summary
+## Results Summary
 
 ```
 ==================================================
 MENTAL HEALTH DETECTION - FINAL RESULTS
 ==================================================
 
-📊 Dataset: 51,060 samples, 7 classes
-🎯 Best Model: Logistic Regression
-✅ Accuracy: 80.06%
-📈 5.6x better than random guessing
-🚀 Excellent performance for traditional ML!
+Dataset: 51,060 samples across 7 classes
+Best Model: Logistic Regression
+Accuracy: 80.06%
+Improvement over Random Baseline: 5.6×
+Performance: Strong results for traditional ML approaches
 
 ==================================================
 ```
 
 ---
 
-**Author**: Machine Learning Project  
-**Date**: November 2025  
-**Status**: Complete ✅
+**Project Type**: Machine Learning Classification  
+**Date**: December 2025  
+**Status**: Complete
